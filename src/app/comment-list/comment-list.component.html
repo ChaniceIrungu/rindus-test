@@ -1,0 +1,7 @@
+<div class="container" *ngFor="let comment of comments">
+  <app-comment-item
+    [comment]="comment"
+    (commentEdit)="handleEmit($event)"
+    (commentDeleted)="handleDelete($event)"
+  ></app-comment-item>
+</div>
