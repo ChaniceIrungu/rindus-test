@@ -7,7 +7,7 @@
     *ngIf="showComments"
   ></app-comment-list>
   <div class="action-buttons">
-    <button (click)="showCommentsTab()" class="commentsButton">
+    <button (click)="showComments = !showComments" class="commentsButton">
       Show Comments
     </button>
     <button (click)="handleClick()" class="updateButton">Update post</button>
