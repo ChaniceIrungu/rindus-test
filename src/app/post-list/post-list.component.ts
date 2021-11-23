@@ -31,13 +31,12 @@ export class PostListComponent implements OnInit {
 
   handleSubmit() {
     if (this.createMode) {
-      this.posts.push(this.updatedPost);
+      this.posts.unshift(this.updatedPost);
     } else {
-      // Update a post
     }
-    //clear form
+
     this.updatedPost = {} as IPost;
-    //hide form
+
     this.showForm = false;
   }
 
@@ -47,5 +46,6 @@ export class PostListComponent implements OnInit {
 
   cancelCreatePost() {
     this.showForm = false;
+    this.updatedPost = {} as IPost;
   }
 }

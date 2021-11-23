@@ -1,3 +1,18 @@
+<div class="form-container">
+  <form action="" class="action-form">
+    <input
+      type="text"
+      name="body"
+      placeholder="Add a Comment"
+      [(ngModel)]="updatedComment.body"
+    />
+    <Button (click)="handleSubmit()">
+      <span *ngIf="createMode">Submit </span>
+      <span *ngIf="!createMode">Edit Comment</span>
+    </Button>
+  </form>
+</div>
+
 <div class="container" *ngFor="let comment of comments">
   <app-comment-item
     [comment]="comment"

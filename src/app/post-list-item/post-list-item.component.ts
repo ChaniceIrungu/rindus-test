@@ -41,8 +41,4 @@ export class PostListItemComponent implements OnInit {
         this.commentsList = response;
       });
   }
-
-  showCommentsTab() {
-    this.showComments = true;
-  }
 }

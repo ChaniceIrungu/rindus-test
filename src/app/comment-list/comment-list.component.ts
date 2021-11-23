@@ -10,13 +10,19 @@ export class CommentListComponent implements OnInit {
   @Input() comments!: Array<IComment>;
 
   updatedComment: IComment = {} as IComment;
-
+  createMode: boolean = true;
   constructor() {}
 
   ngOnInit(): void {}
 
+  handleSubmit() {
+    this.comments.unshift(this.updatedComment);
+    this.updatedComment = {} as IComment;
+  }
+
   handleEmit(selectedComment: IComment) {
     this.updatedComment = selectedComment;
+    this.createMode = false;
   }
 
   handleDelete(commentId: number) {
