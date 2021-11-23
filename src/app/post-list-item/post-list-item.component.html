@@ -8,7 +8,8 @@
   ></app-comment-list>
   <div class="action-buttons">
     <button (click)="showComments = !showComments" class="commentsButton">
-      Show Comments
+      <span *ngIf="!showComments">Show Comments</span>
+      <span *ngIf="showComments">Hide Comments</span>
     </button>
     <button (click)="handleClick()" class="updateButton">Update post</button>
 
