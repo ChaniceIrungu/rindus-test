@@ -1,0 +1,16 @@
+<div class="toolbar" role="banner">
+  <span class="nav"> Post Playground</span>
+</div>
+<br />
+<br />
+<div>
+  <input
+    type="text"
+    placeholder="search post"
+    [(ngModel)]="searchTerm"
+    (input)="searchPosts()"
+    class="search"
+  />
+</div>
+
+<app-post-list [posts]="postList"></app-post-list>
