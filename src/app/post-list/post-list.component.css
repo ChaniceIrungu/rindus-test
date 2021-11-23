@@ -1,0 +1,45 @@
+.container {
+  border: 1px solid black;
+  margin-bottom: 25px;
+}
+
+.add-post-button {
+  display: block;
+  width: 50%;
+  border: none;
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.add-post-button:hover {
+  background-color: #4caf50; /* Green */
+  color: white;
+}
+.cancel-button {
+  margin-left: 2em;
+}
+
+.form-container {
+  margin: 10px;
+  width: 50%;
+  border: 1px solid black;
+}
+
+.action-form {
+  margin: 10px;
+}
+
+label[for="title"] {
+  margin-right: 10px;
+}
+
+label[for="body"] {
+  margin-right: 10px;
+}
+
+input[type="text"] {
+  width: 80%;
+}
+textarea[type="text"] {
+  width: 80%;
+}

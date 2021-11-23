@@ -1,0 +1,17 @@
+<div class="itemWrapper">
+  <p class="title">{{ post.title }}</p>
+  <p>{{ post.body }}</p>
+
+  <app-comment-list
+    [comments]="commentsList"
+    *ngIf="showComments"
+  ></app-comment-list>
+  <div class="action-buttons">
+    <button (click)="showCommentsTab()" class="commentsButton">
+      Show Comments
+    </button>
+    <button (click)="handleClick()" class="updateButton">Update post</button>
+
+    <button (click)="handleDelete()" class="deleteButton">Delete post</button>
+  </div>
+</div>

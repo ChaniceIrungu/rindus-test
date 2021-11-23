@@ -1,0 +1,43 @@
+<div class="form-container" *ngIf="showForm">
+  <form action="" class="action-form">
+    <label for="title" class><b>Title</b></label>
+    <input
+      type="text"
+      id="title"
+      name="title"
+      placeholder="Title goes here :)"
+      [(ngModel)]="updatedPost.title"
+    />
+    <br />
+    <br />
+    <label for="body"><b>Body</b></label>
+    <textarea
+      type="text"
+      id="body"
+      name="body"
+      placeholder="What do you want to talk about?"
+      [(ngModel)]="updatedPost.body"
+    ></textarea>
+    <br />
+    <br />
+    <Button (click)="handleSubmit()">
+      <span *ngIf="createMode">Submit Post</span>
+      <span *ngIf="!createMode">Edit Post</span>
+    </Button>
+    <Button (click)="cancelCreatePost()" class="cancel-button">
+      <span>Cancel</span>
+    </Button>
+  </form>
+</div>
+<br />
+<br />
+<button class="add-post-button" (click)="showCreateForm()">Add a Post</button>
+<br />
+<div class="container" *ngFor="let post of posts">
+  <app-post-list-item
+    class="post-container"
+    [post]="post"
+    (itemClicked)="handleEmit($event)"
+    (itemDeleted)="handleDelete($event)"
+  ></app-post-list-item>
+</div>

@@ -1,0 +1,35 @@
+.title {
+  font-size: large;
+  font-weight: bold;
+}
+
+.itemWrapper {
+  margin: 10px;
+}
+
+.action-buttons {
+  text-align: center;
+}
+
+.deleteButton {
+  background-color: rgb(192, 12, 12);
+  color: #ffffff;
+  display: inline-flex;
+  margin: 4px;
+  margin-right: 1em;
+}
+
+.updateButton {
+  background-color: rgb(24, 167, 11);
+  color: #ffffff;
+  display: inline-flex;
+  margin: 8px;
+  margin-left: 1em;
+}
+
+.commentButton {
+  background-color: rgb(0, 255, 234);
+  color: #ffffff;
+  display: inline-flex;
+  margin: 8px;
+}
